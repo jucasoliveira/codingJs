@@ -155,7 +155,7 @@ John and a friend invented a simple game where the player with the highest value
 4. EXTRA: Add a third player and now decide who wins. Hint: you will need the && operator to take the decision. If you can't solve this one, just watch the solution, it's no problem :)
 
 */
-
+/*
 // 1 & 2
 var johnHeights = 170;
 var johnAge = 15;
@@ -190,7 +190,7 @@ if (calcJohn > calcFriend && calcJohn > calcAnotherFriend){
 } else {
   console.log("there is a draw");
 }
-
+*/
 
 
 ///////////////////////////////////////
@@ -210,7 +210,7 @@ Example output: [true, false, true]
 
 Hint: you can use a loop not only to read from an array, like y[i], but also to set values in an array, like y[i] = ... You can also use the specific array methods.
 */
-
+/*
 var age = [2015,2016,2011,1990,2001,1986,1970,1974,2010,2013,1998,1994];
 //var empty = []
 var full_1 = [1965, 2008, 1992]
@@ -237,3 +237,4 @@ function printFullAge(age){
 
   return ages;
 }
+*/
