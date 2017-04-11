@@ -163,7 +163,7 @@ designerQuestion('Maria');
 ////
 //Closures
 
-
+/*
 function retirement(retirementAge){
   var a = " years left until retirement";
   return function (yearOfBirth) {
@@ -199,3 +199,31 @@ var teacherQuestion = interviewQuestion('teacher');
 var designerQuestion = interviewQuestion('designer');
 
 teacherQuestion('John');
+
+*/
+////
+
+
+var john = {
+  name : 'John',
+  age : 26,
+  job : 'teacher',
+  presentation : function (style, timeOfDay) {
+    if(style == 'formal'){
+      console.log('Good ' + timeOfDay + " ladies and gentleman I\'m " + this.name + " and I\'m a " + this.job + " and my age is  " + this.age);
+    }
+    if(style == 'friendly'){
+      console.log(" Whats's up? I\'m " + this.name + " , I\'m a " + this.job + " and my age is " + this.age + " , have a good " + timeOfDay);
+    }
+  }
+}
+
+var emily = {
+  name : 'Emily',
+  age : 23,
+  job : 'Designer'
+}
+john.presentation('formal','morning');
+
+//Method borrowing
+john.presentation.call(emily,'friendly','afternoon');
