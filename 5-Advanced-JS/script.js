@@ -223,7 +223,14 @@ var emily = {
   age : 23,
   job : 'Designer'
 }
-john.presentation('formal','morning');
+//john.presentation('formal','morning');
 
 //Method borrowing
-john.presentation.call(emily,'friendly','afternoon');
+//john.presentation.call(emily,'friendly','afternoon');
+
+var johnFriendly = john.presentation.bind(john, 'friendly');
+
+johnFriendly('morning');
+johnFriendly('night');
+
+//john.presentation.apply(emily, ['friendly','afternoon']);
