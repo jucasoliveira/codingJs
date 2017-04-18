@@ -288,18 +288,36 @@ c) correct answer (I would use a number for this)
 7. Suppose this code would be a plugin for other programmers to use in their code. So make sure that all your code is private and doesn't interfere with the other programmers code (Hint: we learned a special technique to do exactly that).
 */
 
-function Question () {
-  var enunciate = ["Whos the best on Coding: \n 1. Lucas \n 2. Matheus \n 3. Pedro","Is Javascript the colest language in the world? \n 0. yes \n 1. no"];
-  var correctAnswer = [1,0];
-  var setEverything = Math.floor(Math.random() * enunciate.length);
+function Question (question,answers,correct) {
+  this.question = question;
+  this.answers = answers;
+  this.correct = correct;
+}
 
-  console.log(enunciate[setEverything]);
-  var getAnswer = prompt("Give me answer");
-  if (correctAnswer[setEverything] == getAnswer) {
-    console.log("Acerto miserarvi");
-  } else{
-    console.log("Errrooooou!");
+Question.prototype.displayQuestion = function(){
+  console.log(this.question);
+  for (var i = 0; i < this.answers.length; i++) {
+    console.log(i + ': ' + this.answers[i]);
   }
 }
 
-Question();
+Question.prototype.checkAnswer = function(ans){
+  if(ans === this.correct){
+    console.log("Acerto miserarvi");
+  }else {
+    console.log("Errroooou");
+  }
+}
+
+var q1 = new Question("Whos the best on Coding",['Lucas','Matheus','Pedro'],0);
+var q2 = new Question("Is Javascript the colest language in the world?",['yes','no'],0);
+
+var questions = [q1,q2];
+
+var n = Math.floor(Math.random() * questions.length);
+
+questions[n].displayQuestion();
+
+var answer = parseInt(prompt("Please answer"));
+
+questions[n].checkAnswer(answer);
