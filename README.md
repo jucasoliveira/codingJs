@@ -4,7 +4,7 @@ Hello, welcome to my CodingJS project.
 
 This coding project it's to study vanilla JS, abling to improve my knowlegde.
 
-This content have 4 secsions;
+This content have 5 secsions;
 
 ## 1 - JS Basics
 
@@ -13,3 +13,5 @@ This content have 4 secsions;
 ## 3 - DOM - PIG game
 
 ## 4 - Advanced JS
+
+## 5 - Budgety
