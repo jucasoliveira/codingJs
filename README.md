@@ -15,3 +15,5 @@ This content have 5 secsions;
 ## 4 - Advanced JS
 
 ## 5 - Budgety
+
+## 6 - EcmaScript2015
