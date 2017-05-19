@@ -310,3 +310,41 @@ console.log(ages[full.indexOf(true)]);
 console.log(ages.findIndex(cur => cur >= 18));
 console.log(ages.find(cur => cur >= 18));
 */
+
+
+/////////////////////////////////////////////
+// Lecture : Spread Operator
+/*
+function add4ages(a,b,c,d) {
+  return a + b + c +d;
+}
+var sum1 = add4ages(18,30,12,31);
+
+console.log(sum1);
+
+//ES5
+
+var ages5 = [18,30,12,21];
+var sum2 = add4ages.apply(null, ages5);
+console.log(sum2);
+
+//ES6
+
+const sum3 = add4ages(...ages5);
+
+console.log(sum3);
+
+
+const familyOne = ['joh','jane','mark'];
+const familyTwo = ['mary','bob','anne'];
+const bigFamily = [...familyOne,'Lucas',...familyTwo];
+
+console.log(bigFamily);
+
+
+const h = document.querySelector('h1');
+const boxes = document.querySelectorAll('.box');
+const all = [h, ...boxes];
+
+Array.from(all).forEach(cur => cur.style.color = 'purple');
+*/
