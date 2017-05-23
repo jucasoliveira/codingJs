@@ -348,3 +348,61 @@ const all = [h, ...boxes];
 
 Array.from(all).forEach(cur => cur.style.color = 'purple');
 */
+
+
+/////////////////////////////////////////////
+// Lecture : Rest Parameters
+
+
+//ES5
+/*
+function isFullAge5(limit) {
+  console.log(arguments);
+  var argsArr = Array.prototype.slice.call(arguments, 1);
+  argsArr.forEach(function (cur) {
+    console.log((2016 - cur) >= limit);
+  })
+}
+
+isFullAge5(16,2017,1991,2010,1987);
+
+
+//ES6
+
+function ifFullAge6(limit , ...years){
+    console.log(years);
+    years.forEach(cur => console.log((2016 - cur) >= limit));
+}
+
+ifFullAge6(18,2017,1991,2010,1987);
+*/
+
+// Lecture : Default Parameters
+
+
+//ES5
+/*
+function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
+
+  lastName == undefined ? lastName = 'Smith' : lastName;
+  nationality == undefined ? nationality = 'American' : nationality;
+
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.yearOfBirth = yearOfBirth;
+  this.nationality = nationality;
+}
+
+
+
+//ES6
+function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'American') {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.yearOfBirth = yearOfBirth;
+  this.nationality = nationality;
+}
+
+var john = new SmithPerson('John',1990);
+var emily = new SmithPerson('Emily', 1983, 'Diaz', 'Spanish');
+*/
